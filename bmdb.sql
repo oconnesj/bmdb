@@ -33,4 +33,5 @@ create table actor (
     );
     
     
-    
+    insert into movie (id,Title, year, rating, Director)
+	  values (1, 'The Matrix', 1999, 'R', 'The Wachowski Brothers');
