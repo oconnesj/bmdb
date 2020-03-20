@@ -5,9 +5,9 @@ select * from actor;
 select firstName as 'First Name', lastName as 'Last Name', gender as 'Gender' , role as 'Role' , Title, year as 'Year', rating as 'Rating', Director
 from actor
 join credit
-	on actor.id = credit.movieID
+	on actor.ID = credit.movieID
 join movie
-	on credit.actorID = movie.id;
+	on credit.actorID = movie.ID;
 
 
 /*

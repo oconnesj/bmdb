@@ -6,7 +6,7 @@ use bmdb;
 
 -- DDL - Create Tables
 create table movie (
-	id 				int 			primary key auto_increment,
+	ID 				int 			primary key auto_increment,
 	Title			varchar(100) 	not null,
 	year			int 			not null,
 	rating			varchar(5) 		not null,		
@@ -14,7 +14,7 @@ create table movie (
 	);
 
 create table credit (
-	id 				int 			not null,
+	ID 				int 			not null,
 	actorID			int				not null,
 	movieID 		int				primary key auto_increment,
 	role 			varchar(50)		not null
@@ -24,7 +24,7 @@ create table credit (
 
 
 create table actor (
-	id 				int 			primary key auto_increment,
+	ID 				int 			primary key auto_increment,
 	firstName		varchar(25) 	not null,
 	lastName		varchar(25) 	not null,
 	gender			varchar(6)		not null,
