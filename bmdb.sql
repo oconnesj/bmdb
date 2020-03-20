@@ -13,24 +13,28 @@ create table movie (
 	Director		varchar(50) 	not null
 	);
 
-create table credit (
-	ID 				int 			not null,
-	actorID			int				not null,
-	movieID 		int				primary key auto_increment,
-	role 			varchar(50)		not null
-	
-
-	);
-
 
 create table actor (
 	ID 				int 			primary key auto_increment,
 	firstName		varchar(25) 	not null,
 	lastName		varchar(25) 	not null,
 	gender			varchar(6)		not null,
-    birthdate		date			not null,
-    FOREIGN KEY (id) REFERENCES credit(movieID)
+    birthdate		date			not null
     );
+    
+  create table credit (
+	ID 				int 			primary key auto_increment,
+	actorID			int				not null,
+	movieID 		int				not null,
+	role 			varchar(50)		not null,
+	foreign key (actorID) references actor(ID),
+	foreign key (movieID) references movie(ID),
+    constraint act_mov unique (actorID, movieID)
+    );
+
+	
+
+  
     
 -- Movie Inserts --
 insert into movie (id,Title, year, rating, Director)
@@ -52,24 +56,7 @@ insert into movie (id,Title, year, rating, Director)
     
       
 
--- Credit Inserts --   
-insert into credit (id, actorID, movieID, role)
-	values(1,101,1, 'Neo');
-insert into credit (id, actorID, movieID, role)
-	values(1,201,2, 'Morpheus');
-insert into credit (id, actorID, movieID, role)
-	values(1,301,3, 'Trinity');
-insert into credit (id, actorID, movieID, role)
-	values(1,401,4, 'Agent Smith');
-insert into credit (id, actorID, movieID, role)
-	values(2,502,5, 'Marty McFly');
-insert into credit (id, actorID, movieID, role)
-	values(2,602,6, 'Dr. Emmett Brown');
-insert into credit (id, actorID, movieID, role)
-	values(2,702,7, 'Lorraine Baines');
-insert into credit (id, actorID, movieID, role)
-	values(2,802,8, 'George McFly');  
-    
+
 -- Actor Inserts --
 
 insert into actor (id, firstName,	lastName, gender, birthDate)
@@ -88,6 +75,25 @@ insert into actor (id, firstName,	lastName, gender, birthDate)
 	values(7, 'Lea', 'Thompson', 'Male', '1961-05-31');
 insert into actor (id, firstName,	lastName, gender, birthDate)
 	values(8, 'Crispin', 'Glover', 'Male', '1964-04-20');    
+    
+-- Credit Inserts --   
+insert into credit (id, actorID, movieID, role)
+	values(1,101,1, 'Neo');
+insert into credit (id, actorID, movieID, role)
+	values(1,201,2, 'Morpheus');
+insert into credit (id, actorID, movieID, role)
+	values(1,301,3, 'Trinity');
+insert into credit (id, actorID, movieID, role)
+	values(1,401,4, 'Agent Smith');
+insert into credit (id, actorID, movieID, role)
+	values(2,502,5, 'Marty McFly');
+insert into credit (id, actorID, movieID, role)
+	values(2,602,6, 'Dr. Emmett Brown');
+insert into credit (id, actorID, movieID, role)
+	values(2,702,7, 'Lorraine Baines');
+insert into credit (id, actorID, movieID, role)
+	values(2,802,8, 'George McFly');  
+        
     
 -- join  ---
   
