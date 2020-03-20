@@ -2,12 +2,13 @@ select * from movie;
 select * from credit;
 select * from actor;
 
-select firstName as 'First Name', lastName as 'Last Name', gender as 'Gender' , role as 'Role' , Title, year as 'Year', rating as 'Rating', Director
+select concat(firstName, " ", lastName) as Name, role as Role, concat(Title, " ", year, " ", rating)as Movie, Director 
 from actor
 join credit
-	on actor.ID = credit.movieID
+on actor.ID = credit.actorID
 join movie
-	on credit.actorID = movie.ID;
+on credit.movieID = movie.ID;
+
 
 
 /*
