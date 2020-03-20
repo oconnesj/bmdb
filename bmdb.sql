@@ -44,4 +44,4 @@ insert into credit (id, actorID, movieID, role)
 insert into credit (id, actorID, movieID, role)
 	values(1,1,2, 'Morpheus');
  insert into credit (id, actorID, movieID, role)
-	values(1,1,3, 'Morpheus');     
+	values(1,1,3, 'Trinity');     
