@@ -54,4 +54,23 @@ insert into credit (id, actorID, movieID, role)
 insert into credit (id, actorID, movieID, role)
 	values(2,2,7, 'Lorraine Baines');
 insert into credit (id, actorID, movieID, role)
-	values(2,2,8, 'George McFly');    
+	values(2,2,8, 'George McFly');  
+    
+-- Actor Inserts --
+-- 1987-04-21 --
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(1, 'Keanu', 'Reeves', 'Male', '1964-09-02');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(2, 'Laurence', 'Fishburne', 'Male', '1961-07-30');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(3, 'Carrie-Anne', 'Moss', 'Female', '1967-08-21');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(4, 'Hugo', 'Weaving', 'Male', '1960-04-04');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(5, 'Michael J.', 'Fox', 'Male', '1961-06-09');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(6, 'Christopher', 'Llyod', 'Male', '1938-10-22');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(7, 'Lea', 'Thompson', 'Male', '1961-05-31');
+insert into actor (id, firstName,	lastName, gender, birthDate)
+	values(8, 'Crispin', 'Glover', 'Male', '1964-04-20');    
