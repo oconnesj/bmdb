@@ -43,5 +43,15 @@ insert into credit (id, actorID, movieID, role)
 	values(1,1,1, 'Neo');
 insert into credit (id, actorID, movieID, role)
 	values(1,1,2, 'Morpheus');
- insert into credit (id, actorID, movieID, role)
-	values(1,1,3, 'Trinity');     
+insert into credit (id, actorID, movieID, role)
+	values(1,1,3, 'Trinity');
+insert into credit (id, actorID, movieID, role)
+	values(1,1,4, 'Agent Smith');
+insert into credit (id, actorID, movieID, role)
+	values(2,2,5, 'Marty McFly');
+insert into credit (id, actorID, movieID, role)
+	values(2,2,6, 'Dr. Emmett Brown');
+insert into credit (id, actorID, movieID, role)
+	values(2,2,7, 'Lorraine Baines');
+insert into credit (id, actorID, movieID, role)
+	values(2,2,8, 'George McFly');    
