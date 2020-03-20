@@ -2,12 +2,12 @@ select * from movie;
 select * from credit;
 select * from actor;
 
-select *
-from movie
-join actor
-	on movie.id = actor.id
+select firstName as 'First Name', lastName as 'Last Name', gender as 'Gender' , role as 'Role' , Title, year as 'Year', rating as 'Rating', Director
+from actor
 join credit
-on actor.id = credit.ID;    
+	on actor.id = credit.movieID
+join movie
+	on credit.actorID = movie.id;
 
 
 /*

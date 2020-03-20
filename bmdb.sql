@@ -17,8 +17,8 @@ create table credit (
 	id 				int 			not null,
 	actorID			int				not null,
 	movieID 		int				primary key auto_increment,
-	role 			varchar(50)		not null,
-	FOREIGN KEY (actorID) REFERENCES movie(id)
+	role 			varchar(50)		not null
+	
 
 	);
 
@@ -34,27 +34,41 @@ create table actor (
     
 -- Movie Inserts --
 insert into movie (id,Title, year, rating, Director)
-	  values (1, 'The Matrix', 1999, 'R', 'The Wachowski Brothers');
+	  values (101, 'The Matrix', 1999, 'R', 'The Wachowski Brothers');
 insert into movie (id,Title, year, rating, Director)
-	  values (2, 'Back to the Future', 1985, 'PG', 'Robert Zemeckis');  
+	  values (201, 'The Matrix', 1999, 'R', 'The Wachowski Brothers');
+insert into movie (id,Title, year, rating, Director)
+	  values (301, 'The Matrix', 1999, 'R', 'The Wachowski Brothers');
+insert into movie (id,Title, year, rating, Director)
+	  values (401, 'The Matrix', 1999, 'R', 'The Wachowski Brothers');      
+insert into movie (id,Title, year, rating, Director)
+	  values (502, 'Back to the Future', 1985, 'PG', 'Robert Zemeckis'); 
+insert into movie (id,Title, year, rating, Director)
+	  values (602, 'Back to the Future', 1985, 'PG', 'Robert Zemeckis'); 
+insert into movie (id,Title, year, rating, Director)
+	  values (702, 'Back to the Future', 1985, 'PG', 'Robert Zemeckis'); 
+insert into movie (id,Title, year, rating, Director)
+	  values (802, 'Back to the Future', 1985, 'PG', 'Robert Zemeckis'); 
+    
+      
 
 -- Credit Inserts --   
 insert into credit (id, actorID, movieID, role)
-	values(1,1,1, 'Neo');
+	values(1,101,1, 'Neo');
 insert into credit (id, actorID, movieID, role)
-	values(1,1,2, 'Morpheus');
+	values(1,201,2, 'Morpheus');
 insert into credit (id, actorID, movieID, role)
-	values(1,1,3, 'Trinity');
+	values(1,301,3, 'Trinity');
 insert into credit (id, actorID, movieID, role)
-	values(1,1,4, 'Agent Smith');
+	values(1,401,4, 'Agent Smith');
 insert into credit (id, actorID, movieID, role)
-	values(2,2,5, 'Marty McFly');
+	values(2,502,5, 'Marty McFly');
 insert into credit (id, actorID, movieID, role)
-	values(2,2,6, 'Dr. Emmett Brown');
+	values(2,602,6, 'Dr. Emmett Brown');
 insert into credit (id, actorID, movieID, role)
-	values(2,2,7, 'Lorraine Baines');
+	values(2,702,7, 'Lorraine Baines');
 insert into credit (id, actorID, movieID, role)
-	values(2,2,8, 'George McFly');  
+	values(2,802,8, 'George McFly');  
     
 -- Actor Inserts --
 
