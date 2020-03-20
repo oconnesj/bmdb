@@ -14,19 +14,23 @@ create table movie (
 	);
 
 create table credit (
-	id 				int 			not null auto_increment,
+	id 				int 			not null,
 	actorID			int				not null,
 	movieID 		int				primary key,
-	role 			varchar(50)		not null
+	role 			varchar(50)		not null,
+	FOREIGN KEY (actorID) REFERENCES movie(id)
+
 	);
 
 
 create table actor (
-	id 				int 			not null primary key auto_increment,
-	studentID		int 			not null,
-	courseID		int 			not null,
-	grade			varchar(1),
-	FOREIGN KEY (studentID) REFERENCES student(id),
-	FOREIGN KEY (courseID) REFERENCES course(id),
-    CONSTRAINT std_course unique (studentID, courseID)
+	id 				int 			primary key,
+	firstName		varchar(25) 	not null,
+	lastName		varchar(25) 	not null,
+	gender			varchar(6)		not null,
+    birthdate		date			not null,
+    FOREIGN KEY (id) REFERENCES credit(movieID)
     );
+    
+    
+    
